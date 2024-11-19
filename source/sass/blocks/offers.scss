@@ -1,0 +1,320 @@
+.offers {
+  width: 320px;
+  margin: 0 auto;
+
+  h4 {
+    @include font($secondary-font, 22px, 22px, $white-color);
+
+    font-weight: 700;
+    text-align: center;
+    padding: 30px 95px 9px;
+    margin: 0;
+  }
+
+  h2 {
+    @include font($secondary-font, 64px, 64px, $white-color);
+
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 0 95px 28px;
+  }
+
+  p {
+    @include font($secondary-font, 16px, 20px, $white-color);
+
+    width: 260px;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    margin-bottom: 60px;
+
+    h4 {
+      @include font($secondary-font, 24px, 24px, $white-color);
+
+      font-weight: 700;
+      text-align: left;
+      padding: 40px 25px 20px;
+    }
+
+    h2 {
+      @include font($secondary-font, 70px, 70px, $white-color);
+
+      font-weight: 700;
+      text-align: left;
+      padding: 0 25px 40px;
+    }
+
+    p {
+      @include font($secondary-font, 18px, 24px, $white-color);
+
+      font-weight: 300;
+      text-align: left;
+      margin: 0 25px 160px;
+      padding: 0;
+      width: 228px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1366px;
+    margin-bottom: 100px;
+
+    h4 {
+      @include font($secondary-font, 26px, 26px, $white-color);
+
+      font-weight: 700;
+      padding: 40px 45px 20px;
+    }
+
+    h2 {
+      padding: 0 45px 40px;
+    }
+
+    p {
+      margin: 0 45px 156px;
+    }
+  }
+}
+
+.offers__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+  }
+}
+
+.offers__title {
+  @include font($primary-font, 32px, 32px, $additional-color);
+
+  font-weight: 600;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 42px, 42px, $additional-color);
+
+    font-weight: 600;
+    width: 678px;
+    height: 42px;
+    padding: 0;
+    margin: 60px 45px 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($primary-font, 54px,54px, $additional-color);
+
+    font-weight: 600;
+    width: 1160px;
+    margin: 100px 103px 70px;
+  }
+}
+
+.offers__years {
+  width: 320px;
+  background-color: $banner-color;
+  min-height: 271px;
+
+  @media (min-width: $tablet-width) {
+    width: 278px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+    height: 460px;
+  }
+}
+
+.offers__button {
+  @include font($secondary-font, 14px, 14px, $white-color);
+
+  font-weight: 700;
+  width: 73px;
+  margin: 0 123px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid $white-color;
+  padding-bottom: 4px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 73px;
+    text-align: left;
+    margin: 25px 180px 40px 25px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 1 px solid $white-color;
+  }
+
+  &:active {
+    opacity: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.offers__img {
+  display: block;
+  height: 360px;
+
+  @media (min-width: $tablet-width) {
+    height: 462px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 460px;
+  }
+}
+
+.offers__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  padding: 0;
+  margin: 40px 15px;
+
+  p {
+    @include font($secondary-font, 14px, 22px, $additional-color);
+
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+    padding: 0 20px 18px;
+  }
+
+  h4 {
+    @include font($secondary-font, 22px, 22px, $additional-color);
+
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 20px 20px 20px 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    column-gap: 30px;
+    margin: 35px 45px;
+
+    p {
+      @include font($secondary-font, 16px, 24px, $additional-color);
+
+      font-weight: 300;
+      text-align: left;
+      padding: 0 20px 30px;
+      width: 280px;
+    }
+
+    h4 {
+      @include font($secondary-font, 26px, 26px, $additional-color);
+
+      font-weight: 700;
+      text-align: left;
+      padding: 20px 20px 10px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    margin: 78px 0 0;
+
+    p {
+      padding: 0 20px 40px;
+      width: 506px;
+    }
+  }
+}
+
+.offers__button-girl {
+  @media (min-width: $desktop-width) {
+    margin: 0 162px 0 45px;
+  }
+}
+
+.offers__container-desktop {
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+  }
+}
+
+.offers__item {
+  list-style-type: none;
+  width: 290px;
+  border: 7px solid;
+  border-image: linear-gradient(148.82deg, $status-tabs 0.85%, #00359f 100%) 1;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 20px;
+    width: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+  }
+}
+
+.offers__button-list {
+  @include font($secondary-font, 14px, 14px, $additional-color);
+
+  font-weight: 700;
+  border-bottom: 1px solid $additional-color;
+  margin: 0 101px 26px;
+  padding: 0;
+  padding-bottom: 2px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    width: 73px;
+    text-align: left;
+    margin: 0 217px 20px 20px;
+  }
+}
+
+.offers__tablet-wrapper {
+  width: 270px;
+
+  @media (min-width: $desktop-width) {
+    width: 506px;
+  }
+}
+
+.offers__tablet-container {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    min-width: 270px;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.offers__features-skidka {
+  padding: 20px;
+}

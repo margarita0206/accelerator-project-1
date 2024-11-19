@@ -1,0 +1,344 @@
+.features__item {
+  list-style-type: none;
+  width: 290px;
+  min-height: 150px;
+  margin: 0 15px 40px;
+  text-align: center;
+
+  &:nth-child(1),
+  &:nth-child(4) {
+    margin: 0 15px 35px;
+    padding: 0;
+  }
+
+  &:nth-child(5) {
+    margin: 0 15px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    min-height: 92px;
+    display: grid;
+    column-gap: 15px;
+    grid-template-areas: "number info" "number information" "span information";
+    margin: 0;
+    padding-right: 20px;
+
+    &:nth-child(1),
+    &:nth-child(4) {
+      margin: 0;
+      grid-template-columns: 107px 203px;
+    }
+
+    &:nth-child(2),
+    &:nth-child(5) {
+      padding: 0;
+      margin: 0;
+      grid-template-columns: 71px 238px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    min-height: 110px;
+
+    &:nth-child(1) {
+      padding-bottom: 40px;
+      border-bottom: 2px solid rgba($color: #d10a42, $alpha: 0.2);
+      column-gap: 43px;
+    }
+
+    &:nth-child(2) {
+      padding-bottom: 40px;
+      border-bottom: 2px solid rgba($color: #d10a42, $alpha: 0.2);
+      column-gap: 79px;
+    }
+
+    &:nth-child(4) {
+      column-gap: 43px;
+      padding-top: 40px;
+    }
+
+    &:nth-child(5) {
+      column-gap: 79px;
+      padding-top: 40px;
+    }
+  }
+}
+
+.features {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #f8f9fc;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1366px;
+    margin-bottom: 100px;
+  }
+}
+
+.features__title {
+  @include font($primary-font, 32px, 32px, $additional-color);
+
+  font-weight: 600;
+  padding: 40px 20px;
+  text-align: center;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 42px, 42px, $additional-color);
+
+    font-weight: 600;
+    width: 768px;
+    padding: 60px 45px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($primary-font, 54px, 54px, $additional-color);
+
+    font-weight: 600;
+    padding: 100px 103px 50px;
+  }
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+
+  h2 {
+    @include font($secondary-font, 64px, 64px, $color-gradient-button);
+
+    font-weight: 700;
+    background: linear-gradient(127.61deg, $status-tabs 30%, #0041ca 45.58%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  span {
+    @include font($secondary-font, 14px, 20px, #2e35ac);
+
+    font-weight: 400;
+    margin: 0 auto;
+    margin-bottom: 12px;
+    text-align: center;
+    width: 170px;
+  }
+
+  p {
+    @include font($secondary-font, 14px, 22px, $additional-color);
+
+    font-weight: 300;
+    text-align: center;
+    width: 230px;
+    margin: 0 auto;
+  }
+
+  h4 {
+    @include font($secondary-font, 18px, 20px, $additional-color);
+
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  br {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 40px 30px;
+    justify-content: space-between;
+
+    h2 {
+      @include font($secondary-font, 70px, 70px, $color-gradient-text);
+
+      font-weight: 700;
+      background: linear-gradient(127.61deg, $status-tabs 0%, #0041ca 45.58%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0;
+      text-align: left;
+      grid-area: number;
+    }
+
+    span {
+      @include font($secondary-font, 14px, 22px, #2e35ac);
+
+      font-weight: 400;
+      text-align: left;
+      margin: 0;
+      grid-area: span;
+      width: 107px;
+    }
+
+    p {
+      @include font($secondary-font, 16px, 24px, $additional-color);
+
+      font-weight: 300;
+      width: auto;
+      text-align: left;
+      grid-area: information;
+    }
+
+    h4 {
+      @include font($secondary-font, 20px, 22px, #2e35ac);
+
+      font-weight: 400;
+      text-align: left;
+      grid-area: info;
+      margin: 0;
+      margin-bottom: 12px;
+    }
+
+    br {
+      display: block;
+      
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1166px;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "one free two" "fiwe free for";
+    gap: 0 40px;
+
+    span {
+      width: 107px;
+    }
+
+    h4 {
+      @include font($secondary-font, 22px, 22px, #2e35ac);
+
+      font-weight: 400;
+      margin-bottom: 8px;
+      width: 210px;
+    }
+  }
+}
+
+.features__item-one {
+  @media (min-width: $desktop-width) {
+    grid-area: one;
+  }
+}
+
+.features__item-two {
+  @media (min-width: $desktop-width) {
+    grid-area: two;
+  }
+}
+
+.features__item-fre {
+  @media (min-width: $desktop-width) {
+    grid-area: free;
+  }
+}
+
+.features__item-for {
+  @media (min-width: $desktop-width) {
+    grid-area: fiwe;
+  }
+}
+
+.features__item-fiwe {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: for;
+  }
+}
+
+.features__item--dark {
+  background-color: $additional-button-stroke;
+  padding: 30px 0 39px;
+  margin: 0;
+  width: 320px;
+  margin-bottom: 40px;
+  display: block;
+
+  h2 {
+    background: $white-color;
+    background-clip: text;
+    margin-bottom: 6px;
+  }
+
+  span {
+    @include font($secondary-font, 22px, 22px, $white-color);
+
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  p {
+    @include font($secondary-font, 14px, 22px, $white-color);
+    color: $white-color;
+    font-weight: 300;
+    width: 170px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 35px;
+    margin: 0 179px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    span {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 25px;
+    }
+
+    p {
+      @include font($secondary-font, 16px, 24px, $white-color);
+
+      font-weight: 300;
+      text-align: center;
+      width: 250px;
+      padding-top: 25px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 360px;
+    padding: 58px 40px;
+
+    span {
+      margin-bottom: 30px;
+    }
+
+    p {
+      @include font($secondary-font, 16px, 24px, $white-color);
+
+      font-weight: 300;
+      text-align: center;
+      width: 280px;
+    }
+  }
+}
