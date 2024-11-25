@@ -2,9 +2,17 @@
 // import Swiper from "swiper";
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
-import { displayPrices } from './price';
-import { DEFAULT_SERVICE_TIME } from './const';
-import { updateFaqControls } from './accordeon';
+import { handleFaqControls } from './accordeon';
+import { swiper, reviewsSwiper } from './swiper';
+import { validForm } from './form';
 
-displayPrices(DEFAULT_SERVICE_TIME);
-updateFaqControls();
+handleFaqControls();
+
+window.addEventListener('DOMContentLoaded', () => {
+
+  window.addEventListener('load', () => {
+    validForm();
+    swiper();
+    reviewsSwiper();
+  });
+});

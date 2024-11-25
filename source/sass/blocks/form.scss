@@ -228,6 +228,7 @@
   margin: 0;
   margin-bottom: 28px;
   cursor: pointer;
+  text-decoration: none;
 
   @media (min-width: $tablet-width) {
     @include font($secondary-font, 14px, 22px, $additional-color);

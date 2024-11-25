@@ -2,7 +2,7 @@
   width: 320px;
   margin: 0 auto;
 
-  h4 {
+  h3 {
     @include font($secondary-font, 22px, 22px, $white-color);
 
     font-weight: 700;
@@ -11,7 +11,7 @@
     margin: 0;
   }
 
-  h2 {
+  h4 {
     @include font($secondary-font, 64px, 64px, $white-color);
 
     font-weight: 700;
@@ -34,7 +34,7 @@
     width: 768px;
     margin-bottom: 60px;
 
-    h4 {
+    h3 {
       @include font($secondary-font, 24px, 24px, $white-color);
 
       font-weight: 700;
@@ -42,7 +42,7 @@
       padding: 40px 25px 20px;
     }
 
-    h2 {
+    h4 {
       @include font($secondary-font, 70px, 70px, $white-color);
 
       font-weight: 700;
@@ -55,7 +55,7 @@
 
       font-weight: 300;
       text-align: left;
-      margin: 0 25px 160px;
+      margin: 0 25px 156px;
       padding: 0;
       width: 228px;
     }
@@ -65,19 +65,19 @@
     width: 1366px;
     margin-bottom: 100px;
 
-    h4 {
+    h3 {
       @include font($secondary-font, 26px, 26px, $white-color);
 
       font-weight: 700;
       padding: 40px 45px 20px;
     }
 
-    h2 {
+    h4 {
       padding: 0 45px 40px;
     }
 
     p {
-      margin: 0 45px 156px;
+      margin: 0 45px 153px;
     }
   }
 }
@@ -117,7 +117,7 @@
 
     font-weight: 600;
     width: 1160px;
-    margin: 100px 103px 70px;
+    margin: 100px 103px 82px;
   }
 }
 
@@ -171,6 +171,10 @@
   &:disabled {
     opacity: 0.3;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 3px;
+  }
 }
 
 .offers__img {
@@ -202,7 +206,7 @@
     padding: 0 20px 18px;
   }
 
-  h4 {
+  h3 {
     @include font($secondary-font, 22px, 22px, $additional-color);
 
     font-weight: 700;
@@ -220,11 +224,11 @@
 
       font-weight: 300;
       text-align: left;
-      padding: 0 20px 30px;
+      padding: 0 20px 28px;
       width: 280px;
     }
 
-    h4 {
+    h3 {
       @include font($secondary-font, 26px, 26px, $additional-color);
 
       font-weight: 700;
@@ -235,10 +239,10 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: column;
-    margin: 78px 0 0;
+    margin: 82px 0 0;
 
     p {
-      padding: 0 20px 40px;
+      padding: 0 20px 37px;
       width: 506px;
     }
   }
@@ -274,6 +278,7 @@
 
   @media (min-width: $desktop-width) {
     width: 560px;
+    padding-bottom: 21px;
   }
 }
 

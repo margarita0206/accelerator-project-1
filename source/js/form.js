@@ -1,23 +1,20 @@
-let inputField = document.querySelector(".form__input");
-let nameField = document.getElementById("name");
-let phoneField = document.getElementById("phone");
+const registerForm = document.querySelector('.form__free-lesson');
+const submit = registerForm.querySelector('.form__button');
+const formField = registerForm.querySelectorAll('.form__input');
 
-if (inputField.value === "") {
-  alert("Поле ввода не должно быть пустым");
+const validForm = () => {
+  submit.addEventListener('click', () => {
 
-  return;
-}
+    for (let i = 0; i < formField.length; i++) {
+      if (!formField[i].validity.valid) {
+        formField[i].classList.add('form__input--error');
+        return;
+      } else if (formField[i].validity.valid) {
+        formField[i].setCustomValidity('');
+        formField[i].classList.remove('form__input--error');
+      }
+    }
+  });
+};
 
-let namePattern = /[a-zа-яё]/;
-if (!namePattern.test(nameField.value)) {
-  alert("Имя должно содержать только буквы");
-
-  return;
-}
-
-let phonePattern = /+7{1,9}/;
-if (!phonePattern.test(phoneField.value)) {
-  alert("Номер телефона должен содержать только цифры и начинается через +7");
-
-  return;
-}
+export { validForm };

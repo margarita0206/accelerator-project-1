@@ -1,6 +1,7 @@
 // Vendor
 // ---------------------------------
 @import "./vendor/normalize";
+@import "./vendor/swiper-bundle";
 
 /* common */
 @import "./common/global";
@@ -22,10 +23,11 @@
 @import "./blocks/page-body";
 @import "./blocks/reviews";
 @import "./blocks/features";
-@import "./blocks/ticketseason";
 @import "./blocks/accordeon-item";
 @import "./blocks/faq-accordeon";
 @import "./blocks/faq-tab";
 @import "./blocks/faq-tabs";
 @import "./blocks/offers";
 @import "./blocks/faq";
+@import "./blocks/juri";
+@import "./blocks/content";
