@@ -5,13 +5,18 @@ const buttonPrev = document.querySelector('.juri__button--prev');
 
 
 const swiper = new Swiper('.swiper__wrapper', {
-
   navigation: {
     nextEl: buttonNext,
     prevEl: buttonPrev,
   },
 
+  direction: 'horizontal',
+  init: false,
   loop: true,
+  simulateTouch: false,
+  keyboard: {
+    enabled: false,
+  },
 
   breakpoints: {
     1366: {
@@ -47,4 +52,4 @@ const reviewsSwiper = new Swiper('.swiper2', {
   },
 });
 
-export {swiper, reviewsSwiper };
+export { swiper, reviewsSwiper };

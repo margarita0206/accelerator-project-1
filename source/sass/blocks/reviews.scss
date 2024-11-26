@@ -52,7 +52,6 @@
   }
 }
 
-
 .reviews__wrapper {
   background-color: $additional-button-stroke;
   width: 240px;
@@ -106,39 +105,59 @@
   }
 }
 
+.reviews__container-slide {
+  position: relative;
+}
+
 .reviews__swiper-button {
   display: flex;
-  position: relative;
   background-color: transparent;
   padding: 0;
   border: none;
 }
 
 .reviews__swiper-button--prev {
+  transform: rotate(180deg);
+
   &::after {
-    content: "";
+    content: '';
+    display: block;
     position: absolute;
+    top: -30px;
+    right: 0;
     width: 16px;
     height: 32px;
-    mask: url("/__spritemap#arrow-left-view") center center no-repeat;
-    mask-size: 16px 97px;
-    background: $additional-color;
-    left: 50%;
-    transform: translateX(-50%);
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 18px 32px;
+    background-color: $additional-color;
+    mask-image: url("../../__spritemap#sprite-right-arrow-view");
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 110px;
   }
 }
 
 .reviews__swiper-button--next {
   &::after {
-    content: "";
-    position: absolute;
-    width: 16px;
-    height: 32px;
-    mask: url("/__spritemap#arrow-right-view") center center no-repeat;
-    mask-size: 20px 32px;
-    background: $additional-color;
-    right: 50%;
-    transform: translateX(50%);
+    content: '';
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 0;
+      width: 16px;
+      height: 32px;
+      mask-repeat: no-repeat;
+      mask-position: 50% 50%;
+      mask-size: 18px 32px;
+      background-color: $additional-color;
+      mask-image: url("../../__spritemap#sprite-right-arrow-view");
+      transform: rotate(0);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 110px;
   }
 }
 
@@ -146,9 +165,9 @@
   position: absolute;
   display: none;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     display: block;
-    top: 105px;
+    top: 50%;
     width: 20px;
     height: 32px;
 
@@ -156,7 +175,7 @@
       left: 0;
     }
     &--next {
-      right: 30px;
+      right: 0;
     }
   }
 
@@ -175,7 +194,9 @@
 
 .reviews__swiper {
   width: 240px;
+  margin: 0 auto;
   overflow: hidden;
+  height: 328px;
   box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
 
   ::-webkit-scrollbar {
@@ -198,11 +219,11 @@
 
   @media (min-width:$tablet-width) {
     width: 500px;
-    min-height: 242px;
+    height: 242px;
   }
 
   @media (min-width:$desktop-width) {
     width: 560px;
-    min-height: 258px;
+    height: 258px;
   }
 }
