@@ -11,7 +11,6 @@
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
     <link rel="stylesheet" href="sass/style.scss">
-    <link rel="stylesheet" href="sass/vendor/swiper.css">
   </head>
 
   <body class="page-body">
@@ -584,15 +583,21 @@
         <div class="reviews__container-slide">
           <h2 class="reviews__title">Отзывы</h2>
             <!-- Additional required wrapper -->
-            <div class="reviews__swiper swiper2">
+              <div class="reviews__slider-wrapper ">
                         <!-- If we need navigation buttons -->
                 <div class="reviews__button-wrapper reviews__button-wrapper--prev">
-                  <button class="reviews__swiper-button--prev reviews__swiper-button swiper-button-prev swiper-button" tabindex="0"></button>
+                  <button class="reviews__swiper-button--prev reviews__swiper-button swiper-button-prev swiper-button" tabindex="0">
+                    <span class="visually-hidden">Предыдущий слайд.</span>
+                  </button>
                 </div>
                 <div class="reviews__button-wrapper reviews__button-wrapper--next">
-                  <button class="reviews__swiper-button--next reviews__swiper-button swiper-button-next swiper-button" tabindex="0"></button>
+                  <button class="reviews__swiper-button--next reviews__swiper-button swiper-button-next swiper-button" tabindex="0">
+                    <span class="visually-hidden">Следующий слайд.</span>
+                  </button>
                 </div>
-              <!-- Slides -->
+                <!-- Slides -->
+              <div class="reviews__swiper swiper2">
+                <div class="reviews__swiper-wrapper swiper-wrapper">
                   <div class="swiper-slide reviews__wrapper">
                     <picture>
                       <source media="(min-width: 1366px)" width="80" height="80" type="image/webp"
@@ -633,6 +638,8 @@
                       <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажёры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
                     </div>
                   </div>
+                </div>
+              </div>
             </div>
         </div>
       </section>

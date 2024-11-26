@@ -46,6 +46,11 @@
   }
 }
 
+.reviews__button-wrapper {
+  position: absolute;
+  display: none;
+}
+
 .reviews__container {
   @media (min-width: $tablet-width) {
     width: 320px;
@@ -112,6 +117,7 @@
 .reviews__swiper-button {
   display: flex;
   background-color: transparent;
+  position: relative;
   padding: 0;
   border: none;
 }
@@ -121,21 +127,21 @@
 
   &::after {
     content: '';
-    display: block;
-    position: absolute;
-    top: -30px;
-    right: 0;
-    width: 16px;
-    height: 32px;
-    mask-repeat: no-repeat;
-    mask-position: 50% 50%;
-    mask-size: 18px 32px;
-    background-color: $additional-color;
-    mask-image: url("../../__spritemap#sprite-right-arrow-view");
-  }
+      display: block;
+      position: absolute;
+      top: -33px;
+      right: -6px;
+      width: 16px;
+      height: 32px;
+      mask-repeat: no-repeat;
+      mask-position: 50% 50%;
+      mask-size: 18px 32px;
+      background-color: $additional-color;
+      mask-image: url("../../__spritemap#sprite-right-arrow-view");
 
-  @media (min-width: $desktop-width) {
-    top: 110px;
+      @media (min-width: $desktop-width) {
+        top: -100px;
+      }
   }
 }
 
@@ -144,7 +150,7 @@
     content: '';
       display: block;
       position: absolute;
-      top: 30px;
+      top: 33px;
       right: 0;
       width: 16px;
       height: 32px;
@@ -153,11 +159,10 @@
       mask-size: 18px 32px;
       background-color: $additional-color;
       mask-image: url("../../__spritemap#sprite-right-arrow-view");
-      transform: rotate(0);
   }
 
   @media (min-width: $desktop-width) {
-    top: 110px;
+    top: 100px;
   }
 }
 

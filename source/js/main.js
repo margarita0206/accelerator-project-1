@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('load', () => {
     validForm();
-    swiper();
-    reviewsSwiper();
+    reviewsSwiper.init();
+    swiper.init();
   });
 });

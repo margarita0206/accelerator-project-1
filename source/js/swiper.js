@@ -1,10 +1,10 @@
-import Swiper from './swiper';
+import Swiper from 'swiper/bundle';
 
 const buttonNext = document.querySelector('.juri__button--next');
 const buttonPrev = document.querySelector('.juri__button--prev');
 
 
-const swiper = new Swiper('.swiper__wrapper', {
+const swiper = new Swiper('.swiper', {
   navigation: {
     nextEl: buttonNext,
     prevEl: buttonPrev,
