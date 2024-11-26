@@ -1,18 +1,16 @@
 import Swiper from 'swiper/bundle';
-
-const buttonNext = document.querySelector('.juri__button--next');
-const buttonPrev = document.querySelector('.juri__button--prev');
-
+import { Navigation } from 'swiper/modules';
 
 const swiper = new Swiper('.swiper', {
   navigation: {
-    nextEl: buttonNext,
-    prevEl: buttonPrev,
+    nextEl: 'juri__button--next',
+    prevEl: 'juri__button--prev',
   },
 
   direction: 'horizontal',
   init: false,
   loop: true,
+  modules: [Navigation],
   simulateTouch: false,
   keyboard: {
     enabled: false,

@@ -2,6 +2,7 @@
   width: 320px;
   padding: 40px 30px;
   margin: 0 auto;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -20,7 +21,7 @@
   font-weight: 600;
   text-align: center;
   margin-bottom: 20px;
-  width: 290px;
+  width: 320px;
 
   @media (min-width: $tablet-width) {
     @include font($primary-font, 54px, 54px, $additional-color);
@@ -62,11 +63,6 @@
   }
 }
 
-.juri__item {
-  width: 260px;
-  height: 300px;
-}
-
 .juri__slide {
   margin: 0;
   padding: 0;
@@ -101,6 +97,11 @@
   &:focus-visible .juri__title-wrapper {
     transform: translateY(0);
   }
+}
+
+.juri__swiper-slide-wrapper {
+  width: 260px;
+  height: 300px;
 }
 
 .juri__image {
@@ -156,7 +157,6 @@
   transition: transform 0.55s cubic-bezier(0.4, 0, 0.4, 1);
   width: 100%;
 }
-
 
 .juri__content {
   display: flex;
