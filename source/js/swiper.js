@@ -1,7 +1,6 @@
 import Swiper from 'swiper/bundle';
-import { Navigation } from 'swiper/modules';
 
-const swiper = new Swiper('.swiper', {
+const JuriSwiper = new Swiper('.swiper', {
   navigation: {
     nextEl: 'juri__button--next',
     prevEl: 'juri__button--prev',
@@ -10,7 +9,6 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   init: false,
   loop: true,
-  modules: [Navigation],
   simulateTouch: false,
   keyboard: {
     enabled: false,
@@ -24,12 +22,12 @@ const swiper = new Swiper('.swiper', {
 
     768: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 40,
     },
 
     320: {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 10,
     },
   },
 });
@@ -50,4 +48,4 @@ const reviewsSwiper = new Swiper('.swiper2', {
   },
 });
 
-export { swiper, reviewsSwiper };
+export { JuriSwiper, reviewsSwiper };
