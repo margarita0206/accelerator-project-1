@@ -2,8 +2,8 @@ import Swiper from 'swiper/bundle';
 
 const JuriSwiper = new Swiper('.swiper', {
   navigation: {
-    nextEl: 'juri__button--next',
-    prevEl: 'juri__button--prev',
+    nextEl: '.swiper__button-next',
+    prevEl: '.swiper__button-prev',
   },
 
   direction: 'horizontal',
