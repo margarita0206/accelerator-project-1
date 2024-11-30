@@ -65,12 +65,15 @@
   display: block;
   text-align: center;
   margin-bottom: 18px;
+  max-width: 206px;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     @include font($secondary-font, 24px, 24px, $additional-color);
 
     font-weight: 700;
     margin-bottom: 22px;
+    max-width: 250px;
   }
 
   @media (min-width: $desktop-width) {
@@ -90,12 +93,14 @@
   display: block;
   text-align: center;
   margin-bottom: 18px;
+  max-width: 206px;
 
   @media (min-width: $tablet-width) {
     @include font($secondary-font, 16px, 24px, $color-accent);
 
     font-weight: 300;
     margin-bottom: 22px;
+    max-width: 250px;
   }
 
   @media (min-width: $desktop-width) {
@@ -111,15 +116,18 @@
   display: block;
   position: relative;
   text-align: center;
-  padding: 48px 71px 0 37px;
+  padding: 48px 62px 0 27px;
   z-index: 1;
   margin-bottom: 18px;
+  max-width: 206px;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 90px;
     padding: 60px 86px 0 42px;
     margin-bottom: 22px;
+    max-width: 250px;
   }
 
   @media (min-width: $desktop-width) {

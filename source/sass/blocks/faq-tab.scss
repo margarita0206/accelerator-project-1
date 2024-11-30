@@ -1,5 +1,5 @@
 .faq-tab {
-  min-height: 46px;
+  min-height: 45px;
 }
 
 .faq-tab__button {
@@ -22,7 +22,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(151deg, $banner-color 0%, #003eb7 100%);
+    background: $color-gradient-button;
     z-index: -1;
     transform-origin: left;
     transform: scaleX(0);

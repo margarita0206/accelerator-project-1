@@ -1,8 +1,14 @@
 .main-footer__info {
   padding: 0;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 3px;
+  }
+
   @media (min-width: $desktop-width) {
     padding-bottom: 4px;
+    width: 600px;
+    margin: 0;
   }
 }
 
@@ -19,7 +25,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 35px;
-    padding: 45px 45px 48px;
+    padding: 45px 45px 45px 44px;
   }
 
   @media (min-width: $desktop-width) {

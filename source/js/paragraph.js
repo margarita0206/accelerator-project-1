@@ -31,3 +31,4 @@ const debouncedResize = debounce((evt) => {
 
 window.addEventListener('resize', debouncedResize);
 window.addEventListener('loading', debouncedResize);
+export { debouncedResize };

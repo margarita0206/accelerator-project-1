@@ -5,13 +5,19 @@
 import { handleFaqControls } from './accordeon';
 import { JuriSwiper, reviewsSwiper } from './swiper';
 import { validForm } from './form';
+import { priceTabs } from './price';
+import { debouncedResize } from './paragraph';
+import { videoIframe } from './iframe';
 
 handleFaqControls();
+debouncedResize();
 
 window.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('load', () => {
     validForm();
+    videoIframe();
+    priceTabs();
     reviewsSwiper.init();
     JuriSwiper.init();
   });

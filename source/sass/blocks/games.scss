@@ -1,20 +1,20 @@
 .games {
   background-color: $white-color;
-  width: 290px;
+  width: 320px;
+  padding: 25px 15px;
   margin: 0 auto;
-  padding: 23px 0;
 
   @media (min-width: $tablet-width) {
-    width: 678px;
+    width: 768px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 60px 0;
+    padding: 60px 45px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1160px;
-    padding: 100px 0;
+    width: 1366px;
+    padding: 100px 103px;
   }
 }
 
@@ -25,13 +25,15 @@
   column-gap: 37px;
 
   @media (min-width: $tablet-width) {
-    gap: 0;
-    margin-bottom: 10px;
+    column-gap: 18px;
+    margin-bottom: 8px;
+    margin-top: 2px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     column-gap: 75px;
+    margin-top: 0;
   }
 }
 
@@ -39,39 +41,45 @@
   @include font($primary-font, 48px, 54px, $white-color);
 
   font-weight: 600;
-  width: 117px;
+  max-width: 117px;
   margin: 0;
   padding-bottom: 16px;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     padding: 0;
     margin-right: 2px;
+    max-width: 100px;
+    margin-top: -2px;
   }
 
   @media (min-width: $desktop-width) {
     @include font($primary-font, 82px, 96px, $white-color);
 
     font-weight: 600;
-    width: 168px;
-    height: 192px;
+    max-width: 168px;
+    min-height: 192px;
+    padding-top: 1px;
+    margin-top: 0;
   }
 }
 
 .games__container {
   background-color: $banner-color;
-  width: 290px;
+  max-width: 290px;
   margin: 0 auto;
   padding: 40px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
-    width: 300px;
-    height: 348px;
+    max-width: 300px;
+    min-height: 348px;
+    padding: 39px 40px 38px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 500px;
-    height: 500px;
+    max-width: 500px;
+    min-height: 500px;
     padding: 60px 80px 98px;
   }
 }
@@ -94,7 +102,7 @@
     @include font($secondary-font, 18px, 24px, $white-color);
 
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 }
 
@@ -105,22 +113,22 @@
   text-decoration: none;
   display: block;
   text-transform: uppercase;
-  width: 210px;
-  height: 60px;
+  max-width: 210px;
+  min-height: 60px;
   border: 2px solid $white-color;
   padding: 22px 50px;
   text-align: center;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    width: 220px;
-    height: 66px;
+    max-width: 220px;
+    min-height: 66px;
     padding: 25px 50px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 340px;
-    height: 66px;
+    max-width: 340px;
+    min-height: 66px;
   }
 
   &:hover,
@@ -146,21 +154,24 @@
 
   font-weight: 300;
   margin: 0;
-  width: 56px;
+  max-width: 56px;
   padding-bottom: 2px;
   border-bottom: 1px solid $white-color;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     @include font($secondary-font, 18px, 24px, $white-color);
 
     font-weight: 300;
-    width: 100px;
-    padding-bottom: 1px;
+    max-width: 100px;
+    padding-bottom: 0;
+    margin-top: -1px;
   }
 
   @media (min-width: $desktop-width) {
     width: 95px;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
+    margin-top: 0;
   }
 }
 
@@ -169,26 +180,39 @@
 
   font-weight: 700;
   margin: 0;
+  max-width: 13px;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
-    margin-top: 2px;
+    margin-top: 10px;
   }
 
   @media (min-width: $desktop-width) {
     @include font($secondary-font, 40px, 40px, $white-color);
 
     font-weight: 700;
-    margin-top: 6px;
+    margin-top: 8px;
+    max-width: 21px;
   }
 }
 
-.games__promo-bold--tablet {
-  @media (min-width: $tablet-width) {
-    margin-top: 10px;
-  }
+.games__promo-time {
+  @include font($secondary-font, 24px, 24px, $white-color);
+
+  font-weight: 700;
+  margin: 0;
+  padding-top: 2px;
+  overflow-wrap: break-word;
 
   @media (min-width: $desktop-width) {
-    margin-top: 8px;
+    @include font($secondary-font, 40px, 40px, $white-color);
+
+    font-weight: 700;
+    margin: 0;
+    max-width: 100px;
+    padding: 0;
+    overflow-wrap: break-word;
+    transform: translateY(7px);
   }
 }
 
@@ -196,13 +220,16 @@
   @include font($secondary-font, 12px, 12px, $white-color);
 
   font-weight: 400;
-  width: 32px;
+  max-width: 32px;
   margin: 0;
+  overflow-wrap: break-word;
 
   @media (min-width: $tablet-width) {
     @include font($secondary-font, 14px, 22px, $white-color);
 
     font-weight: 400;
+    max-width: 37px;
+    padding-top: 1px;
   }
 
   @media (min-width: $desktop-width) {
@@ -219,7 +246,7 @@
   margin-top: 2px;
 
   @media (min-width: $tablet-width) {
-    column-gap: 5px;
+    column-gap: 6px;
   }
 
   @media (min-width: $desktop-width) {
@@ -231,11 +258,11 @@
   margin-bottom: 5px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 10px;
+    margin-bottom: 11px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 }
 

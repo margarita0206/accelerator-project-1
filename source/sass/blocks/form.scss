@@ -1,9 +1,9 @@
 .form__wrapper {
   background-color: $additional-color;
-  padding: 71px 15px 70px;
+  padding: 71px 15px 69px;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 164px;
+    padding: 60px 164px 59px;
   }
 
   @media (min-width: $desktop-width) {
@@ -63,21 +63,22 @@
 
   font-weight: 700;
   text-transform: uppercase;
-  width: 290px;
-  height: 59px;
-  padding: 2px 10px;
+  max-width: 290px;
+  min-height: 60px;
+  padding: 2px 112px;
   background-color: $additional-color;
   color: $white-color;
   border: 2px solid $white-color;
   cursor: pointer;
+  display: block;
+  overflow-wrap: break-word;
+  transform: translateY(-1px);
 
   @media (min-width: $tablet-width) {
-    width: 440px;
-    height: 66px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 477px;
+    width: 100%;
+    padding: 25px 56px;
+    min-height: 66px;
+    max-width: none;
   }
 }
 
@@ -144,16 +145,18 @@
     width: 440px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: none;
+    column-gap: 30px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    column-gap: 20px;
   }
 }
 
 .form__contacts {
-  padding: 37px 15px 11px;
+  padding: 37px 15px 24px;
 
   @media (min-width: $tablet-width) {
     padding: 60px 164px;
@@ -171,12 +174,17 @@
     width: 190px;
     margin-left: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .form__list {
   list-style-type: none;
   padding: 0;
   width: 170px;
+  margin-top: 27px;
 
   @media (min-width: $tablet-width) {
     width: 220px;
