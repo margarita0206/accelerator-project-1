@@ -1,0 +1,283 @@
+.games {
+  background-color: $white-color;
+  width: 320px;
+  padding: 25px 15px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1366px;
+    padding: 100px 103px;
+  }
+}
+
+.games__wrapper {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 37px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 18px;
+    margin-bottom: 8px;
+    margin-top: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 28px;
+    column-gap: 75px;
+    margin-top: 0;
+  }
+}
+
+.games__title {
+  @include font($primary-font, 48px, 54px, $white-color);
+
+  font-weight: 600;
+  max-width: 117px;
+  margin: 0;
+  padding-bottom: 16px;
+  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-right: 2px;
+    max-width: 100px;
+    margin-top: -2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($primary-font, 82px, 96px, $white-color);
+
+    font-weight: 600;
+    max-width: 168px;
+    min-height: 192px;
+    padding-top: 1px;
+    margin-top: 0;
+  }
+}
+
+.games__container {
+  background-color: $banner-color;
+  max-width: 290px;
+  margin: 0 auto;
+  padding: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    max-width: 300px;
+    min-height: 348px;
+    padding: 39px 40px 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 500px;
+    min-height: 500px;
+    padding: 60px 80px 98px;
+  }
+}
+
+.games__info {
+  @include font($secondary-font, 16px, 20px, $white-color);
+
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 18px, 24px, $white-color);
+
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($secondary-font, 18px, 24px, $white-color);
+
+    font-weight: 300;
+    margin-bottom: 31px;
+  }
+}
+
+.games__button {
+  @include font($secondary-font, 12px, 12px, $white-color);
+
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  text-transform: uppercase;
+  max-width: 210px;
+  min-height: 60px;
+  border: 2px solid $white-color;
+  padding: 22px 50px;
+  text-align: center;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    max-width: 220px;
+    min-height: 66px;
+    padding: 25px 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 340px;
+    min-height: 66px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-color: $white-color;
+    border: 2px solid $additional-color;
+    color: $additional-color;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.2;
+  }
+}
+
+.games__data {
+  @include font($secondary-font, 16px, 20px, $white-color);
+
+  font-weight: 300;
+  margin: 0;
+  max-width: 56px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $white-color;
+  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 18px, 24px, $white-color);
+
+    font-weight: 300;
+    max-width: 100px;
+    padding-bottom: 0;
+    margin-top: -1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 95px;
+    padding-bottom: 5px;
+    margin-top: 0;
+  }
+}
+
+.games__promo-bold {
+  @include font($secondary-font, 24px, 24px, $white-color);
+
+  font-weight: 700;
+  margin: 0;
+  max-width: 13px;
+  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($secondary-font, 40px, 40px, $white-color);
+
+    font-weight: 700;
+    margin-top: 8px;
+    max-width: 21px;
+  }
+}
+
+.games__promo-time {
+  @include font($secondary-font, 24px, 24px, $white-color);
+
+  font-weight: 700;
+  margin: 0;
+  padding-top: 2px;
+  overflow-wrap: break-word;
+
+  @media (min-width: $desktop-width) {
+    @include font($secondary-font, 40px, 40px, $white-color);
+
+    font-weight: 700;
+    margin: 0;
+    max-width: 100px;
+    padding: 0;
+    overflow-wrap: break-word;
+    transform: translateY(7px);
+  }
+}
+
+.games__promo-small {
+  @include font($secondary-font, 12px, 12px, $white-color);
+
+  font-weight: 400;
+  max-width: 32px;
+  margin: 0;
+  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 14px, 22px, $white-color);
+
+    font-weight: 400;
+    max-width: 37px;
+    padding-top: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($secondary-font, 14px, 22px, $white-color);
+
+    font-weight: 400;
+    padding-top: 6px;
+  }
+}
+
+.games__promo-date {
+  display: flex;
+  column-gap: 3px;
+  margin-top: 2px;
+
+  @media (min-width: $tablet-width) {
+    column-gap: 6px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.games__promo-container {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 21px;
+  }
+}
+
+.games__promo-details {
+  width: 56px;
+
+  @media (min-width: $tablet-width) {
+    width: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 95px;
+  }
+}
+
+.games__image {
+  display: block;
+}

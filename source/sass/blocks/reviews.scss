@@ -1,0 +1,249 @@
+.reviews {
+  width: 320px;
+  padding: 41px 40px 40px;
+  margin: 0 auto;
+
+  h3 {
+    @include font($secondary-font, 18px, 20px, $white-color);
+
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 17px;
+  }
+
+  p {
+    @include font($secondary-font, 14px, 22px, $white-color);
+
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 60px 45px;
+
+    h3 {
+      @include font($secondary-font, 22px, 22px, $white-color);
+
+      font-weight: 400;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    p {
+      @include font($secondary-font, 16px, 24px, $white-color);
+
+      font-weight: 300;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1366px;
+    padding: 100px 103px;
+
+    p {
+      width: 330px;
+    }
+  }
+}
+
+.reviews__button-wrapper {
+  position: absolute;
+  display: none;
+}
+
+.reviews__container {
+  @media (min-width: $tablet-width) {
+    width: 320px;
+  }
+}
+
+.reviews__wrapper {
+  background-color: $additional-button-stroke;
+  width: 240px;
+  min-height: 328px;
+  padding: 30px 25px 29px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    width: 500px;
+    padding: 40px 30px;
+    min-height: 242px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 30px;
+    width: 560px;
+    padding: 60px;
+  }
+}
+
+.reviews__img {
+  margin: 0 61px 3px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.reviews__title {
+  @include font($primary-font, 32px, 32px, $additional-color);
+
+  font-weight: 600;
+  text-align: center;
+  width: 240px;
+  margin: 0;
+  margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 54px, 54px, $additional-color);
+
+    font-weight: 600;
+    margin-bottom: 35px;
+    width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+    margin-bottom: 75px;
+  }
+}
+
+.reviews__container-slide {
+  position: relative;
+}
+
+.reviews__swiper-button {
+  display: flex;
+  background-color: transparent;
+  position: relative;
+  padding: 0;
+  border: none;
+}
+
+.reviews__swiper-button--prev {
+  transform: rotate(180deg);
+
+  &::after {
+    content: '';
+      display: block;
+      position: absolute;
+      top: -33px;
+      right: -6px;
+      width: 16px;
+      height: 32px;
+      mask-repeat: no-repeat;
+      mask-position: 50% 50%;
+      mask-size: 18px 32px;
+      background-color: $additional-color;
+      mask-image: url("../../__spritemap#sprite-right-arrow-view");
+
+      @media (min-width: $desktop-width) {
+        top: -100px;
+
+        &::after {
+          top: -123px;
+          right: -10px;
+        }
+      }
+  }
+}
+
+.reviews__swiper-button--next {
+  &::after {
+    content: '';
+      display: block;
+      position: absolute;
+      top: 33px;
+      right: 0;
+      width: 16px;
+      height: 32px;
+      mask-repeat: no-repeat;
+      mask-position: 50% 50%;
+      mask-size: 18px 32px;
+      background-color: $additional-color;
+      mask-image: url("../../__spritemap#sprite-right-arrow-view");
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 100px;
+
+    &::after {
+      top: 50px;
+      right: -33px;
+    }
+  }
+}
+
+.reviews__button-wrapper  {
+  position: absolute;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    top: 50%;
+    width: 20px;
+    height: 32px;
+
+    &--prev {
+      left: 0;
+    }
+    &--next {
+      right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    top: 113px;
+
+    &--prev {
+      left: 196px;
+    }
+    &--next {
+      right: 226px;
+    }
+  }
+}
+
+.reviews__swiper {
+  width: 240px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 328px;
+  box-shadow: 0 0 40px 0 rgba(28, 51, 116, 0.2);
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+  }
+
+  @media (min-width:$tablet-width) {
+    width: 500px;
+    height: 242px;
+  }
+
+  @media (min-width:$desktop-width) {
+    width: 560px;
+    height: 258px;
+  }
+}

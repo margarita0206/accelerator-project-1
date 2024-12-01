@@ -1,0 +1,224 @@
+.content {
+  display: none;
+
+  &--active {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    @media (min-width: $tablet-width) {
+      width: 380px;
+      gap: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: auto;
+    }
+  }
+}
+
+.content__item {
+  display: block;
+  background-color: $white-color;
+  padding: 50px 42px;
+  z-index: 10;
+
+  @media (min-width: $tablet-width) {
+    padding: 65px;
+  }
+
+  &--padding {
+    padding: 50px 24px;
+    margin: 0 auto;
+
+    @media (min-width: $tablet-width) {
+      padding: 65px 43px;
+    }
+  }
+}
+
+.content__item:focus-within {
+  padding: 43px 35px;
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 30;
+  border-style: solid;
+  border-width: 7px;
+
+  @media (min-width: $tablet-width) {
+    padding: 58px;
+  }
+}
+
+.content__title {
+  @include font($secondary-font, 22px, 22px, $additional-color);
+
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+  margin-bottom: 18px;
+  max-width: 206px;
+  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 24px, 24px, $additional-color);
+
+    font-weight: 700;
+    margin-bottom: 22px;
+    max-width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($secondary-font, 26px, 26px, $additional-color);
+
+    font-weight: 700;
+    margin-bottom: 17px;
+  }
+}
+
+.content__description {
+  @include font($secondary-font, 14px, 22px, $color-accent);
+
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+  margin-bottom: 18px;
+  max-width: 206px;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 16px, 24px, $color-accent);
+
+    font-weight: 300;
+    margin-bottom: 22px;
+    max-width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.content__price {
+  @include font($secondary-font, 48px, 72px, $color-accent);
+
+  font-weight: 700;
+  margin: 0;
+  display: block;
+  position: relative;
+  text-align: center;
+  padding: 48px 62px 0 27px;
+  z-index: 1;
+  margin-bottom: 18px;
+  max-width: 206px;
+  overflow-wrap: break-word;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 90px;
+    padding: 60px 86px 0 42px;
+    margin-bottom: 22px;
+    max-width: 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 76px 0 32px;
+    margin-bottom: 17px;
+  }
+
+  &::after {
+    content: attr(title);
+    position: absolute;
+    color: #e8e8e8;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 120px;
+    text-align: center;
+    overflow-wrap: normal;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.48;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      font-size: 100px;
+      line-height: 150px;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 33px;
+    bottom: 19px;
+    right: 37px;
+    mask-image: url("../../__spritemap#sprite-ruble-view");
+    mask-size: 24px 33px;
+    mask-repeat: no-repeat;
+    background-color: $additional-color;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 42px;
+      mask-size: 30px 42px;
+      bottom: 24px;
+      right: 42px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 32px;
+    }
+  }
+}
+
+.content__button {
+  @include font($secondary-font, 12px, 12px, $additional-color);
+
+  font-weight: 700;
+  padding: 25px 42px;
+  text-transform: uppercase;
+  width: 206px;
+  border: 2px solid $additional-color;
+  color: $additional-color;
+  background-color: $white-color;
+
+  @media (min-width: $tablet-width) {
+    width: 250px;
+    padding: 25px 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    background-image: $color-gradient-button;
+    background-color: none;
+    border: none;
+    color: $white-color;
+    padding: 27px 42px;
+    width: 206px;
+
+    @media (min-width: $tablet-width) {
+      padding: 27px 44px;
+      width: 250px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 230px;
+    }
+  }
+}

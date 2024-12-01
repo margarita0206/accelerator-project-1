@@ -1,0 +1,63 @@
+.faq {
+  background-color: #f8f9fc;
+  width: 320px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1366px;
+    padding: 0 103px;
+  }
+}
+
+.faq__title {
+  @include font($primary-font, 32px, 32px, $additional-color);
+
+  font-weight: 600;
+  width: 290px;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 42px, 42px, $additional-color);
+
+    font-weight: 600;
+    width: 678px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include font($primary-font, 54px, 54px, $additional-color);
+
+    font-weight: 600;
+    width: 1160px;
+    grid-column: 1/-1;
+    text-align: left;
+  }
+}
+
+.faq__faq-wrapper {
+  display: flex;
+  flex-flow: wrap column;
+  gap: 35px;
+  justify-content: flex-start;
+  padding: 70px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 0 61px;
+    gap: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 260px 1fr;
+    gap: 50px 40px;
+    padding: 100px 0;
+  }
+}
