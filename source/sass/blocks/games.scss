@@ -26,14 +26,16 @@
 
   @media (min-width: $tablet-width) {
     column-gap: 18px;
-    margin-bottom: 8px;
-    margin-top: 2px;
+    margin-bottom: 4px;
+    margin-top: 5px;
+    transform: translateY(-4px);
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 28px;
     column-gap: 75px;
     margin-top: 0;
+    transform: none;
   }
 }
 
@@ -50,7 +52,6 @@
     padding: 0;
     margin-right: 2px;
     max-width: 100px;
-    margin-top: -2px;
   }
 
   @media (min-width: $desktop-width) {
@@ -73,13 +74,12 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     max-width: 300px;
-    min-height: 348px;
-    padding: 39px 40px 38px;
+    height: 348px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 500px;
-    min-height: 500px;
+    height: 500px;
     padding: 60px 80px 98px;
   }
 }
@@ -95,7 +95,7 @@
     @include font($secondary-font, 18px, 24px, $white-color);
 
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
   }
 
   @media (min-width: $desktop-width) {
@@ -259,10 +259,12 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 11px;
+    margin-top: 4px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 21px;
+    margin-top: 0;
   }
 }
 
@@ -271,10 +273,12 @@
 
   @media (min-width: $tablet-width) {
     width: 100px;
+    margin-top: -2px;
   }
 
   @media (min-width: $desktop-width) {
     width: 95px;
+    margin-top: 0;
   }
 }
 
