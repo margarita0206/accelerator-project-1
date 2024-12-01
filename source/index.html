@@ -7,7 +7,6 @@
     <title>SUPERGYM</title>
     <link rel="preload" href="fonts/AlumniSans/AlumniSans-Bold.woff2" type="font/woff2" as="font">
     <link rel="preload" href="fonts/AlumniSans/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font">
-    <link rel="preload" href="fonts/AlumniSans/AlumniSans-Regular.woff2" type="font/woff2" as="font">
     <link rel="preload" href="fonts/AlumniSans/AlumniSans-SemiBold.woff2" type="font/woff2" as="font">
     <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Bold.woff2" type="font/woff2" as="font">
     <link rel="preload" href="fonts/RobotoCondensed/RobotoCondensed-Light.woff2" type="font/woff2" as="font">
@@ -102,12 +101,12 @@
           <div class="price__wrapper">
             <h3 class="price__title title">Абонементы</h3>
             <div class="price__navigation">
-              <button class="price__button price__button--active" type="button" data-tab="tab_1">1 месяц</button>
-              <button class="price__button" type="button" data-tab="tab_2">6 месяцев</button>
-              <button class="price__button" type="button" data-tab="tab_3">12 месяцев</button>
+              <button class="price__button price__button--active" type="button" data-tab="btn-1">1 месяц</button>
+              <button class="price__button" type="button" data-tab="btn-2">6 месяцев</button>
+              <button class="price__button" type="button" data-tab="btn-3">12 месяцев</button>
             </div>
             <div class="price__list">
-              <ul class="price__content content content--active" id="tab_1">
+              <ul class="price__content content content--active" id="btn-1">
                 <li class="content__item">
                   <h4 class="content__title">С тренером</h4>
                   <p class="content__description">12 занятий</p>
@@ -127,7 +126,7 @@
                   <button class="content__button button" type="button">Купить абонемент</button>
                 </li>
               </ul>
-              <ul class="price__content content" id="tab_2">
+              <ul class="price__content content" id="btn-2">
                 <li class="content__item content__item--padding">
                   <h4 class="content__title">С тренером</h4>
                   <p class="content__description">12 занятий</p>
@@ -147,7 +146,7 @@
                   <button class="content__button button" type="button">Купить абонемент</button>
                 </li>
               </ul>
-              <ul class="price__content content" id="tab_3">
+              <ul class="price__content content" id="btn-3">
                 <li class="content__item content__item--padding">
                   <h4 class="content__title">С тренером</h4>
                   <p class="content__description">12 занятий</p>
@@ -217,17 +216,17 @@
           </div>
       </section>
 
-      <section class="juri" data-test="juri">
+      <section class="main-container__juri juri" data-test="juri">
         <div class="juri__wrapper">
           <h3 class="juri__title">Жюри</h3>
           <div class="juri__swiper-container">
             <div class="juri__button-wrapper juri__button-wrapper-prev">
-              <button class="juri__swiper-button juri__swiper-button--prev swiper__button-prev swiper-button" type="button">
+              <button class="juri__swiper-button juri__swiper-button--prev swiper-button-prev swiper-button" tabindex="0" type="button">
                  <span class="visually-hidden">Предыдущий слайд.</span>
               </button>
             </div>
             <div class="juri__button-wrapper juri__button-wrapper-next">
-              <button class="juri__swiper-button juri__swiper-button--next swiper__button-next swiper-button" type="button">
+              <button class="juri__swiper-button juri__swiper-button--next swiper-button-next swiper-button" tabindex="0" type="button">
                 <span class="visually-hidden">Следующий слайд.</span>
               </button>
             </div>
@@ -598,12 +597,9 @@
       </section>
 
       <section class="main-reviews reviews" data-test="reviews">
-        <!-- Slider main container -->
         <div class="reviews__container-slide">
           <h2 class="reviews__title">Отзывы</h2>
-            <!-- Additional required wrapper -->
               <div class="reviews__slider-wrapper">
-                        <!-- If we need navigation buttons -->
                 <div class="reviews__button-wrapper reviews__button-wrapper--prev">
                   <button class="reviews__swiper-button--prev reviews__swiper-button swiper-button-prev swiper-button" type="button" tabindex="0">
                     <span class="visually-hidden">Предыдущий слайд.</span>
@@ -614,7 +610,6 @@
                     <span class="visually-hidden">Следующий слайд.</span>
                   </button>
                 </div>
-                <!-- Slides -->
               <div class="reviews__swiper swiper2">
                 <div class="reviews__swiper-wrapper swiper-wrapper">
                   <div class="swiper-slide reviews__wrapper">
@@ -669,9 +664,9 @@
             <h2 class="form__title form__title--zanytie">Бесплатное занятие</h2>
               <form class="form__free-lesson" action=" https://echo.htmlacademy.ru/" method="post">
                 <label class="visually-hidden" for="name">Введите ваше имя</label>
-                  <input class="form__input form__input-text" type="text" name="name" id="name"  pattern="[а-яА-ЯёЁa-zA-Z\s]+" placeholder="Имя" required>
+                  <input class="form__input" type="text" name="name" id="name" pattern="[а-яА-ЯёЁa-zA-Z\s]+" placeholder="Имя" required>
                 <label class="visually-hidden" for="tel">Введите ваш номер телефона</label>
-                  <input class="form__input form__input-number" type="tel" name="tel" id="tel" pattern="[0-9]+" placeholder="Телефон" required>
+                  <input class="form__input" type="tel" name="tel" id="tel" pattern="[0-9]+" placeholder="Телефон" required>
                 <button class="form__button" type="submit">Отправить</button>
               </form>
           </div>

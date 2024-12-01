@@ -90,6 +90,7 @@
 
 .juri__heading {
   @include font($secondary-font, 22px, 22px, $white-color);
+
   font-weight: 400;
 
   margin: 0;
@@ -122,6 +123,7 @@
 
 .juri__swiper-slide-text {
   @include font($secondary-font, 16px, 16px, #b6bdcc);
+
   font-weight: 300;
   align-self: flex-start;
   width: 52px;
@@ -131,6 +133,7 @@
 
 .juri__swiper-slide-list {
   @include font($secondary-font, 14px, 22px, $white-color);
+
   font-weight: 400;
   align-self: flex-start;
   display: flex;
@@ -146,6 +149,7 @@
 
 .juri__swiper-slide-item {
   position: relative;
+
   &::before {
     position: absolute;
     content: "";
@@ -232,7 +236,7 @@
   transform: rotate(180deg);
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: -16px;
@@ -253,8 +257,8 @@
     }
 
     @media (min-width: $desktop-width) {
-        right: 37px;
-        top:-13px;
+      right: 37px;
+      top: -13px;
     }
   }
 }
@@ -263,10 +267,10 @@
   right: 2px;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
-    top: -16pxpx;
+    top: -16px;
     right: -673px;
     width: 16px;
     height: 32px;
@@ -285,12 +289,12 @@
     }
 
     @media (min-width: $desktop-width) {
-        right: -1304px;
+      right: -1304px;
 
-        &::after {
-          right: -1305px;
-          top: -19px;
-        }
+      &::after {
+        right: -1305px;
+        top: -19px;
+      }
     }
   }
 }
@@ -304,11 +308,11 @@
     transform: translateY(-50%);
 
     &--prev {
-     left: 0;
+      left: 0;
     }
 
     &--next {
-     right: 0;
+      right: 0;
     }
   }
 }

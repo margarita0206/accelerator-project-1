@@ -26,8 +26,8 @@
 
   @media (min-width: $tablet-width) {
     column-gap: 18px;
-    margin-bottom: 4px;
-    margin-top: 5px;
+    margin-bottom: 6px;
+    margin-top: 4px;
     transform: translateY(-4px);
   }
 
@@ -74,12 +74,13 @@
   @media (min-width: $tablet-width) {
     margin: 0;
     max-width: 300px;
-    height: 348px;
+    min-height: 348px;
+    padding: 40px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 500px;
-    height: 500px;
+    min-height: 500px;
     padding: 60px 80px 98px;
   }
 }
@@ -95,7 +96,7 @@
     @include font($secondary-font, 18px, 24px, $white-color);
 
     font-weight: 300;
-    margin-bottom: 11px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: $desktop-width) {

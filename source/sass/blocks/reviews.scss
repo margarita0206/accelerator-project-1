@@ -50,11 +50,6 @@
   }
 }
 
-.reviews__button-wrapper {
-  position: absolute;
-  display: none;
-}
-
 .reviews__container {
   @media (min-width: $tablet-width) {
     width: 320px;
@@ -125,50 +120,54 @@
   position: relative;
   padding: 0;
   border: none;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .reviews__swiper-button--prev {
   transform: rotate(180deg);
 
   &::after {
-    content: '';
-      display: block;
-      position: absolute;
-      top: -33px;
-      right: -6px;
-      width: 16px;
-      height: 32px;
-      mask-repeat: no-repeat;
-      mask-position: 50% 50%;
-      mask-size: 18px 32px;
-      background-color: $additional-color;
-      mask-image: url("../../__spritemap#sprite-right-arrow-view");
+    content: "";
+    display: block;
+    position: absolute;
+    top: -33px;
+    right: -6px;
+    width: 16px;
+    height: 32px;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 18px 32px;
+    background-color: $additional-color;
+    mask-image: url("../../__spritemap#sprite-right-arrow-view");
 
-      @media (min-width: $desktop-width) {
-        top: -100px;
+    @media (min-width: $desktop-width) {
+      top: -100px;
 
-        &::after {
-          top: -123px;
-          right: -10px;
-        }
+      &::after {
+        top: -123px;
+        right: -10px;
       }
+    }
   }
 }
 
 .reviews__swiper-button--next {
   &::after {
-    content: '';
-      display: block;
-      position: absolute;
-      top: 33px;
-      right: 0;
-      width: 16px;
-      height: 32px;
-      mask-repeat: no-repeat;
-      mask-position: 50% 50%;
-      mask-size: 18px 32px;
-      background-color: $additional-color;
-      mask-image: url("../../__spritemap#sprite-right-arrow-view");
+    content: "";
+    display: block;
+    position: absolute;
+    top: 33px;
+    right: 0;
+    width: 16px;
+    height: 32px;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 18px 32px;
+    background-color: $additional-color;
+    mask-image: url("../../__spritemap#sprite-right-arrow-view");
   }
 
   @media (min-width: $desktop-width) {
@@ -181,7 +180,7 @@
   }
 }
 
-.reviews__button-wrapper  {
+.reviews__button-wrapper {
   position: absolute;
   display: none;
 
@@ -194,6 +193,7 @@
     &--prev {
       left: 0;
     }
+
     &--next {
       right: 0;
     }
@@ -206,6 +206,7 @@
     &--prev {
       left: 196px;
     }
+
     &--next {
       right: 226px;
     }
@@ -237,12 +238,12 @@
     background: #555555;
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     width: 500px;
     height: 242px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 560px;
     height: 258px;
   }

@@ -10,13 +10,11 @@
     width: 105px;
     gap: 15px;
     margin: 0;
-    transform: translateY(-2px)
   }
 
   @media (min-width: $desktop-width) {
     width: 95px;
     gap: 10px;
-    transform: none;
   }
 }
 

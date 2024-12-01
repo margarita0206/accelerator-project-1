@@ -108,7 +108,6 @@
 
     font-weight: 600;
     width: 678px;
-    padding: 0;
     padding: 60px 0 35px;
   }
 
@@ -166,11 +165,12 @@
   }
 
   &:active {
-    opacity: none;
+    opacity: 1;
   }
 
   &:disabled {
-    opacity: 0.3;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 
   @media (min-width: $desktop-width) {
@@ -288,7 +288,7 @@
 
   font-weight: 700;
   border-bottom: 1px solid $additional-color;
-  margin: 0 101px 0;
+  margin: 0 101px;
   padding: 0;
   padding-bottom: 4px;
   cursor: pointer;
@@ -302,6 +302,11 @@
   @media (min-width: $desktop-width) {
     padding-bottom: 5px;
     margin: 0 217px 20px 20px;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 1 px solid $additional-color;
   }
 }
 

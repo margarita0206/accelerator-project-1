@@ -49,10 +49,12 @@
     width: 394px;
     gap: 31px;
     padding: 0;
+    margin-top: -2px;
   }
 
   @media (min-width: $desktop-width) {
     width: 600px;
     gap: 82px;
+    margin-top: 0;
   }
 }

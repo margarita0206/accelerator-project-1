@@ -100,6 +100,29 @@
   @media (min-width: $desktop-width) {
     width: 223px;
   }
+
+  &--error {
+    border-bottom: 1px solid $error-color;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    padding-top: 4px;
+    margin-top: -5px;
+    margin-left: -1px;
+    border: 1px solid $white-color;
+  }
+
+  &:focus::placeholder,
+  &:focus-visible::placeholder {
+    opacity: 0;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
 }
 
 .form__free-lesson {

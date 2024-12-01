@@ -45,11 +45,11 @@
   flex-flow: wrap column;
   gap: 35px;
   justify-content: flex-start;
-  padding: 71px 0;
+  padding: 71px 0 69px;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 0 61px;
-    gap: 45px;
+    padding: 61px 0 59px;
+    gap: 44px;
   }
 
   @media (min-width: $desktop-width) {
