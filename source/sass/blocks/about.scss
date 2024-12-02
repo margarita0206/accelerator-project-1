@@ -273,6 +273,21 @@
       &::before {
         background-color: $additional-color;
       }
+
+      &:disabled {
+        opacity: 0.4;
+        border-color: $additional-color;
+        cursor: auto;
+        pointer-events: none;
+
+        &::before {
+          background: $white-color;
+        }
+
+        &::after {
+          background: $additional-color;
+        }
+      }
     }
   }
 }
