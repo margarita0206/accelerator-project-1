@@ -48,14 +48,10 @@
             </div>
             <div class="hero__image">
               <picture>
-                <source media="(min-width: 1366px)" width="500" height="524" type="image/webp"
-                srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x">
-              <source media="(min-width: 1366px)" width="500" height="524" type="image/jpg"
-                srcset="img/hero-desktop@1x.jpg 1x, img/hero-desktop@2x.jpg 2x">
-              <source width="324" height="390" type="image/webp"
-                srcset="img/hero-tablet@1x.webp 1x, img/hero-tablet@2x.webp 2x">
-              <img class="hero__img" src="img/hero-tablet@1x.jpg" width="324" height="390"
-                srcset="img/hero-tablet@2x.jpg 2x" alt="Накаченный мужчина" fetchpriority="high">
+                <source media="(min-width: 1366px)" width="500" height="524" type="image/webp" srcset="img/hero-desktop@1x.webp 1x, img/hero-desktop@2x.webp 2x">
+              <source media="(min-width: 1366px)" width="500" height="524" type="image/jpg" srcset="img/hero-desktop@1x.jpg 1x, img/hero-desktop@2x.jpg 2x">
+              <source width="324" height="390" type="image/webp" srcset="img/hero-tablet@1x.webp 1x, img/hero-tablet@2x.webp 2x">
+              <img class="hero__img" src="img/hero-tablet@1x.jpg" width="324" height="390" srcset="img/hero-tablet@2x.jpg 2x" alt="Накаченный мужчина" fetchpriority="high">
               </picture>
             </div>
           </div>
@@ -74,23 +70,17 @@
             <source type="image/webp" width="320" height="315" srcset="img/main-mobile@1x.webp 1x, img/main-mobile@2x.webp 2x">
             <source width="660" height="400" type="image/jpg" media="(min-width: 1366px)" srcset="img/main-desktop@1x.jpg 1x, img/main-desktop@2x.jpg 2x">
             <source width="678" height="345" type="image/jpg" media="(min-width: 768px)" srcset="img/main-tablet@1x.jpg 1x, img/main-tablet@2x.jpg 2x">
-            <img class="about__img" width="320" height="280" src="img/main-mobile@1x.jpg" srcset="img/main-mobile@2x.jpg 2x" alt="Тренажерный зал">
+            <img class="about__img" width="320" height="280" src="img/main-mobile@1x.jpg" srcset="img/main-mobile@2x.jpg 2x" alt="Тренажерный зал" loading="lazy" fetchpriority="low">
           </picture>
         </div>
         <div class="about__video-wrapper">
           <picture>
-            <source media="(min-width: 1366px)" width="360" height="230" type="image/webp"
-              srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
-            <source media="(min-width: 1366px)" width="360" height="230" type="image/jpg"
-              srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" width="270" height="170" type="image/webp"
-              srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
-            <source media="(min-width: 768px)" width="270" height="170" type="image/jpg"
-              srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <source width="320" height="170" type="image/webp"
-              srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
-            <img class="about__video" src="img/video-mobile@1x.jpg" width="320" height="170"
-            srcset="img/video-mobile@2x.jpg 2x" alt="Тренажерный зал" fetchpriority="high">
+            <source media="(min-width: 1366px)" width="360" height="230" type="image/webp" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source media="(min-width: 1366px)" width="360" height="230" type="image/jpg" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" width="270" height="170" type="image/webp" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" width="270" height="170" type="image/jpg" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <source width="320" height="170" type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+            <img class="about__video" src="img/video-mobile@1x.jpg" width="320" height="170" srcset="img/video-mobile@2x.jpg 2x" alt="Тренажерный зал" loading="lazy" fetchpriority="low">
           </picture>
           <button class="about__button" type="button" aria-label="Начать воспроизведение.">
           </button>
@@ -173,7 +163,7 @@
             <picture>
               <source width="275" height="328" type="image/webp" srcset="img/abonements@1x.webp 1x, img/abonements@2x.webp 2x">
             <img class="price__picture" src="img/abonements.png" width="275" height="328" srcset="img/abonements@2x.png 2x"
-              alt="Блины для штанги" fetchpriority="high">
+              alt="Блины для штанги" fetchpriority="low">
             </picture>
           </div>
         </section>
@@ -212,7 +202,7 @@
               <source width="290" height="290" type="image/webp"
                 srcset="img/games-mobile@1x.webp 1x, img/games-mobile@2x.webp 2x">
               <img class="games__image" src="img/games-mobile@1x.jpg" width="290" height="290"
-              srcset="img/games-mobile@2x.jpg 2x" alt="Мужчина на спорте" fetchpriority="high">
+              srcset="img/games-mobile@2x.jpg 2x" alt="Мужчина на спорте"  loading="lazy">
             </picture>
           </div>
       </section>
@@ -626,7 +616,7 @@
                       <source width="68" height="68" type="image/webp"
                       srcset="img/otziv-mobile@1x.webp 1x, img/otziv-mobile@2x.webp 2x">
                       <img class="reviews__img" src="img/otziv-mobile@1x.png" width="68" height="68"
-                      srcset="img/otziv-mobile@2x.jpg 2x" alt="Отзыв от девушки" fetchpriority="high">
+                      srcset="img/otziv-mobile@2x.jpg 2x" alt="Отзыв от девушки" loading="lazy" fetchpriority="low">
                     </picture>
                     <div class="reviews__container">
                       <h3>Анна Орлова</h3>
@@ -646,7 +636,7 @@
                       <source width="68" height="68" type="image/webp"
                       srcset="img/otziv-mobile@1x.webp 1x, img/otziv-mobile@2x.webp 2x">
                       <img class="reviews__img" src="img/otziv-mobile@1x.png" width="68" height="68"
-                      srcset="img/otziv-mobile@2x.jpg 2x" alt="Отзыв от девушки" fetchpriority="high">
+                      srcset="img/otziv-mobile@2x.jpg 2x" alt="Отзыв от девушки" loading="lazy" fetchpriority="low">
                     </picture>
                     <div class="reviews__container">
                       <h3>Мария Туркина</h3>
